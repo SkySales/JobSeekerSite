@@ -1,0 +1,345 @@
+/* styles.css */
+
+body {
+    position: relative; 
+    background-color: #555;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.container {
+    flex: 1; 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.card {
+    margin-bottom: 30px;
+    border-radius: 10px;
+    background-color: rgba(101, 101, 101, 0.9);
+    color: #333;
+    box-shadow: 0 -2px 100px rgba(107, 107, 105, 0.2);
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+    box-shadow: 0 2px 5px rgba(160, 159, 159, 0.2);
+    width: 100%;
+    padding: 10px 20px;
+    position: static;
+    background-color: #2e2e2e;
+}
+
+.navbar-nav .nav-link {
+    font-weight: bold; 
+    font-size: 16px;
+    color: #ffffff;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
+    margin-right: 20px;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffffff;
+    background-color: #7d7a7a;
+    transform: scale(1.05);
+    text-decoration: none; 
+}
+
+.navbar-nav .nav-link.active {
+    background-color: #47474a;
+    color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-nav .nav-item:last-child .nav-link {
+    margin-right: 0;
+}
+
+.search-container {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+    border: solid 1px rgb(164, 164, 165);
+    border-radius: 30px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 30px; 
+    border: none;
+    font-size: 16px;
+    background-color: #dddada;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.search-input:focus {
+    background-color: #d1cfcf;
+    box-shadow: 0 0 8px rgb(134, 134, 141);
+    outline: none;
+}
+
+.search-button {
+    position: absolute;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: #7f8c8d;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.job-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(145deg, #090909, #3c3b3b);
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(98, 190, 240, 0.3);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #d3d2d2;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #e1d9d9;
+}
+
+.card-text .s1 {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #9da0ad;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+.form-control {
+    border: 1px solid #ced4da;
+    border-radius: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+.logo {
+    width: 800px;
+    height: 800px;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 60px;
+        height: 60px;  
+    }
+}
+
+.find-hire-text {
+    font-family: 'Monospace';
+    font-weight: 200;
+    font-size: 30px;
+    color: #ade1f0;
+    letter-spacing: 2px;
+}
+
+/*
+FOOTER
+*/
+
+/* Footer base styles */
+.footer {
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 40px 10px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.footer-column {
+    margin: 10px 20px;
+    flex: 1 1 200px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin: 8px 0;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #b0b0b0;
+    font-size: 14px;
+}
+
+.footer-column a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 15px;
+}
+
+.footer-social {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1);
+}
+
+footer p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #b0b0b0;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-column {
+        margin: 15px 0;
+        flex: none;
+        width: 100%;
+    }
+
+    .footer-social {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .footer-bottom {
+        padding-top: 10px;
+    }
+}
+
+
+/*
+FOOTER
+*/
+
+.modal-title {
+    color: #181819;
+}
+
+.modal-footer {
+    color: #181819;
+}
+
+.modal-body .etstu {
+    color: #181819;
+}
+
+.table td a {
+    margin: 0 5px; /* Adds spacing between buttons */
+}
+
+.table .btn {
+    min-width: 80px; /* Ensures uniform button width */
+    text-align: center; /* Centers text inside buttons */
+    padding: 5px 10px; /* Adds consistent padding */
+}
